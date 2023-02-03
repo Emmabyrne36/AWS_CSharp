@@ -40,7 +40,7 @@ public class SqsMessenger : ISqsMessenger
             }
         };
 
-        await _sqs.SendMessageAsync(sendMessageRequest);
+        return await _sqs.SendMessageAsync(sendMessageRequest);
     }
 
     private async Task<string> GetQueueUrlAsync()
