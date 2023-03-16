@@ -13,7 +13,7 @@ builder.Services.AddSwaggerGen();
 var env = builder.Environment.EnvironmentName;
 var appName = builder.Environment.ApplicationName;
 
-// This configuration is based of a key with format: Development_Weather.Api_OpenWeatherMapApi__ApiKey
+// This configuration is based of a key with name format: Development_Weather.Api_OpenWeatherMapApi__ApiKey
 builder.Configuration.AddSecretsManager(configurator: options =>
 {
     options.SecretFilter = entry => entry.Name.StartsWith($"{env}_{appName}");
